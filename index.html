@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Socket.io</title>
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+
+  <script>
+    var socket = io();
+    socket.on("reboot", function(serverData) {
+	   alert(serverData);
+	   var urname = prompt('What is your name?', '');
+	   (urname == null || urname == '') ?
+          alert('Hello, noname') : alert('Hello, ' + urname);
+    });
+  </script>
+
+</body>
+</html>
